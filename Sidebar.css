@@ -1,0 +1,47 @@
+/* Sidebar.module.css */
+.sidebar {
+    width: 200px;
+    background-color: #e6dddd;
+    border-right: 0px solid #eaeaea;
+    transition: transform 0.3s ease;
+    margin-top: 0px;
+  }
+  .navItem {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }  
+  .navLink:hover {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ddd9d9;
+    background-color: #0a41a8;
+  }
+  
+  .icon {
+    margin-right: 2px;
+  }
+  
+  .notificationBadge {
+    background-color: red;
+    color: white;
+    border-radius: 9px;
+    padding: 2px 6px;
+    margin-left: auto;
+  }
+
+  .icon1 {
+    color: #499292; 
+    transition: color 0.3s ease;
+    margin-left: 1px;
+    border-radius: 21px;
+  
+    
+  }
+  
+  .icon1:hover {
+    color: #0056b3; /* Change color on hover */
+    border-radius: 21px;
+  }

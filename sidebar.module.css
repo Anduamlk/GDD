@@ -1,0 +1,308 @@
+
+   
+     .container {
+      display: flex;
+      min-height: 100vh; /* Full screen height */
+      flex-direction: column; /* Stack header above main content */
+    }
+    
+    /* Sidebar Styles */
+  .sidebar {
+      position: fixed;
+      top: 60px; 
+      left: 0;
+      padding: 40px;
+      width: 260px;
+      height: calc(100vh - 80px); /* Full height minus the header height */
+      background-color: #fff;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      z-index: 20; /* Ensure sidebar is above the content */
+    }
+    
+    /* Sidebar always visible on large screens */
+    @media (min-width: 768px) {
+      .sidebar {
+        transform: translateX(0); /* Sidebar should be always visible */
+      }
+    }
+    
+    /* Make the sidebar hidden on small screens initially */
+    @media (max-width: 767px) {
+      .sidebar {
+        transform: translateX(-100%); /* Hide sidebar off-screen */
+      }
+    
+      .sidebarVisible {
+        transform: translateX(0); /* Sidebar visible when toggled */
+      }}
+
+  .navItem { 
+    padding: 5px; 
+    display: flex; 
+    align-items: center; 
+    cursor: pointer; 
+    margin-top: 20px; 
+    position: relative; 
+  } 
+   
+  .navLink { 
+    display: flex; 
+    align-items: center; 
+    text-decoration: none; 
+    color: #333; 
+    margin-left: 30px; 
+  } 
+  .navLink:hover { 
+    color: #5e94bb;  /* Blue color on hover */ 
+    background-color: #e0f7ff;  /* Light blue background on hover */ 
+  } 
+   
+   
+  .icon1 { 
+    font-size: 1.5rem; 
+  } 
+   
+   
+  /* Close Button for Sidebar on Small Screens */ 
+  .closeSidebarButton {
+    position: absolute;
+    top: 22px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold; /* Make the close button bold */
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .closeSidebarButton:hover {
+    color: #f44336;
+    background-color: rgba(0, 0, 0, 0.1); /* Light background on hover */
+  } 
+   
+  /* Base styles for the dropdown box */ 
+  .dropdown-box { 
+  width: 14rem; /* Default width */ 
+  padding: 1.5rem; /* Default padding */ 
+  } 
+   
+  /* Media Query for small screens (max-width: 640px) */ 
+  @media (max-width: 640px) { 
+  .dropdown-box { 
+    width: 12rem; /* Reduce width on small screens */ 
+    padding: 1rem; /* Reduce padding on small screens */ 
+  } 
+  } 
+   
+  /* Media Query for medium screens (max-width: 768px) */ 
+  @media (max-width: 768px) { 
+  .dropdown-box { 
+    width: 10rem; /* Further reduce width on medium screens */ 
+    padding: 0.75rem; /* Further reduce padding on medium screens */ 
+  } 
+  } 
+   
+/* Notification badge styles */
+.notificationBadge {
+  position: absolute;
+  top: -4px;  /* Adjust this to move the badge closer to the text */
+  left: 150px; /* Move the badge closer to the right edge of the text */
+  background-color: #f44336; /* Red color for notification */
+  color: white;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-size: 12px;  /* Slightly smaller font for the badge */
+}
+  .icon { 
+    font-size: 20px; 
+    margin-right: 10px; 
+    width: 35px; 
+    height: 35px; 
+    color: #4e5052; /* Set icons to blue */ 
+  }  
+   
+  .icon:hover { 
+    color: #b5d2f3; /* Optional hover effect */ 
+  } 
+   
+   
+   
+   
+   
+   
+   
+  /* Header styles */ 
+  .header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #ffffff; 
+    padding: 10px 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+    position: fixed; 
+    width: 100%; 
+    height: auto; 
+    top: 0; 
+    left: 0; 
+    z-index: 20; 
+    box-sizing: border-box; 
+  } 
+   
+  /* Left section of the header (logo) */ 
+  .left { 
+    display: flex; 
+    align-items: center; 
+    flex: 1; 
+    justify-content: flex-start; /* Make sure logo stays to the left */ 
+  } 
+   
+  .logo { 
+    width: 80px; /* Increased logo size */ 
+    height: 80px; 
+     
+  } 
+   
+  /* Right section of the header (icons and username) */ 
+  .right { 
+    display: flex; 
+    align-items: center; 
+    position: relative; /* Avoid absolute positioning */ 
+    gap: 4px; /* Completely remove the gap between items */ 
+    margin-left: auto; /* Push items to the right */   
+  } 
+   
+  .right1 { 
+    display: flex; 
+    align-items: center; 
+    position: relative; /* Avoid absolute positioning */ 
+    margin-left: auto; /* Push items to the right */   
+  } 
+   
+  /* Username */ 
+  .username { 
+    font-size: 16px; 
+   
+    color: #333; 
+    font-weight: 500; 
+    margin: 0; /* Remove any margin */ 
+    padding: 0; /* Remove any
+  }
+    padding */ 
+} 
+ 
+.icon { 
+  font-size: 24px; 
+  margin-left: 0; /* Remove margin-left to reduce the gap */ 
+  cursor: pointer; 
+  margin: 0; /* Remove margin */ 
+padding: 0; /* Remove padding */ 
+margin-right: 10px; /* Adjust the margin to control the spacing */ 
+ 
+} 
+ 
+/* Hamburger icon for mobile */ 
+.hamburgerIcon { 
+  display: none; /* Hide by default */ 
+  font-size: 1.5rem; /* Make hamburger smaller */ 
+  cursor: pointer; 
+  margin-left: 10px; 
+} 
+ 
+/* Responsive styles (adjusting only sizes, keeping placement) */ 
+@media (max-width: 1024px) { 
+  .header { 
+    height: auto; /* Allow flexible height */ 
+    padding: 15px; /* Adjust padding */ 
+  } 
+} 
+/* Responsive styles (adjusting only sizes, keeping placement) */ 
+@media (max-width: 768px) { 
+  .header { 
+    height: auto; /* Allow flexible height */ 
+    padding: 15px; /* Adjust padding */ 
+  } 
+ 
+  .left { 
+    .left {
+      flex: 0; /* Prevent the left section from taking excess space */
+      justify-content: flex-start; /* Keep it left-aligned */
+    }
+  } 
+ 
+  .logo { 
+    width: 80px; /* Resize logo for small screens */ 
+    height: 60px; 
+    padding: -0; /* Remove any padding */ 
+  } 
+ 
+  .right { 
+    justify-content: flex-start; /* Align icons and username to the left */ 
+    margin-top: 10px; 
+    gap: 0; /* Completely remove the gap between items */ 
+   margin-left: auto; /* Push items to the right */ 
+  } 
+  .right1 { 
+    justify-content: flex-start; /* Align icons and username to the left */ 
+    margin-top: 10px; 
+    gap: 0; /* Completely remove the gap between items */ 
+   margin-left: auto; /* Push items to the right */  
+  } 
+ 
+  .icon { 
+    font-size: 15px; /* Reduce icon size for smaller screens */ 
+  
+  } 
+ 
+  .username { 
+    font-size: 12px; /* Reduce username size */ 
+    margin-left: 10px; 
+    margin: 0; /* Remove any margin */ 
+   padding: 0; /* Remove any padding */ 
+  } 
+ 
+  .hamburgerIcon { 
+    display: block; /* Show the hamburger icon */ 
+    font-size: 1.2rem; /* Smaller size for the hamburger */ 
+    margin-left: 5px; /* Adjust spacing */ 
+    margin-top: 10px; 
+ 
+  } 
+} 
+ 
+/* For very small screens (max-width: 480px), further adjustments */ 
+@media (max-width: 480px) { 
+  .logo { 
+    width: 90px; /* Further resize logo */ 
+    height: 60px; 
+    margin-right: 100px; /* Remove any margin */ 
+ 
+  } 
+ 
+  .icon { 
+    font-size: 10px; /* Smaller icons */ 
+  } 
+  
+  .username { 
+    font-size: 12px; /* Smaller username */ 
+  } 
+ 
+  .header { 
+    padding: 10px 15px; /* Adjust padding for very small screens */ 
+  } 
+ 
+  .hamburgerIcon { 
+    font-size: 1rem; /* Smaller hamburger icon for very small screens */ 
+    margin-left: 5px; /* Adjust spacing */ 
+    margin-top: 10px; 
+  } 
+ 
+  .right1 { 
+    justify-content: flex-start; /* Align icons and username to the left */ 
+    margin-top: 10px; 
+    gap: 0; /* Completely remove the gap between items */ 
+   margin-left: auto; /* Push items to the right */  
+  } 
+}

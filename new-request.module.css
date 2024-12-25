@@ -1,0 +1,190 @@
+/* Sidebar */ 
+.sidebar { 
+ 
+    position: fixed; 
+    top: 60px; /* Sidebar starts below the header */ 
+    left: 0; 
+    padding: 40px; 
+    width: 250px; 
+    height: calc(100vh - 80px); /* Full height minus the header height */ 
+    background-color: #fff; 
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s ease; 
+    z-index: 10; /* Ensure sidebar is above the content */ 
+  } 
+   
+  
+  /* Sidebar always visible on large screens */
+  @media (min-width: 768px) {
+    .sidebar {
+      transform: translateX(0); /* Sidebar is always visible */
+    }
+  }
+  
+  /* Make the sidebar hidden on small screens initially */
+  @media (max-width: 767px) {
+    .sidebar {
+      transform: translateX(-100%); /* Hide sidebar off-screen */
+    }
+  
+    .sidebarVisible {
+      transform: translateX(0); /* Sidebar visible when toggled */
+    }
+  }
+  
+  .navItem {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .navLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    margin-left: 10px;
+  }
+  .navLink:hover {
+    color: #105485;  /* Blue color on hover */
+    background-color: #e0f7ff;  /* Light blue background on hover */
+  }
+  /* Icon styles */
+  
+  .notificationBadge {
+    position: absolute;
+    top: -5px;
+    right: 20px;
+    background-color: #f44336; /* Red color for notification */
+    color: white;
+    padding: 2px 6px;
+    border-radius: 45%;
+    font-size: 14px;
+    height: 25px;
+    width: 20px;
+  }
+  
+  .icon {
+    font-size: 20px;
+    margin-right: 10px;
+    width: 35px;
+    height: 35px;
+    color: #1789DC; /* Set icons to blue */
+  } 
+  
+  .icon:hover {
+    color: #0070f3; /* Optional hover effect */
+  }
+  .icon1 {
+    font-size: 1.5rem;
+  }
+  
+  .arrowIcon {
+    transition: transform 0.3s;
+  }
+  
+  .rotateArrow {
+    transform: rotate(180deg);
+  }
+  
+  .subOptions {
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .subOption {
+    padding: 5px 0;
+  }
+  
+  /* Main content adjustments */
+  .mainContent {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+    padding-left: 250px; /* Content padding to avoid overlap with sidebar */
+  }
+  
+  /* Hamburger icon */
+  .hamburgerIcon {
+    display: none; /* Hide by default */
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 20px; /* Spacing */
+  }
+  
+  /* Show hamburger icon on small screens only */
+  @media (max-width: 767px) {
+    .hamburgerIcon {
+      display: block;
+    }
+  
+    .mainContent {
+      padding-left: 0; /* No padding on small screens */
+    }
+  }
+  
+   /* Header styles */
+   .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    height: 8%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+  }
+  
+  /* Left section of the header */
+  .left {
+    display: flex;
+    align-items: center;
+  }
+  
+   /* Right section of the header (icons and pie chart) */
+   .right {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds gap of 10px between items */
+    position: absolute;
+    right: 80px;
+    top: 35px; /* Positioning icons and username 25px from the top */
+  }
+  
+  
+  .left, .right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  
+  .username {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  @media (max-width: 768px) {
+    .table-wrapper {
+      padding-right: 50px; /* Reduce space on smaller screens */
+    }
+  }
+
+  @media (max-width: px) {
+    .table-wrapper {
+      padding-right: 100px; /* Reduce space on smaller screens */
+    }
+  }
